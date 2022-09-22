@@ -5,10 +5,8 @@ import {info} from "../../info/Info";
 
 export default function Portfolio() {
     return (
-        <Box>
-            <div>
-            <br></br>
-            <h1 style={{textAlign: "center"}}>Portfolio</h1>
+        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
+            <h1 display={'flex'} style={{textAlign: "center"}}>Portfolio</h1>
             <Grid container display={'flex'} justifyContent={'center'}>
                 {info.portfolio.map((project, index) => (
                    <Grid item xs={12} md={6} key={index}>
@@ -16,7 +14,6 @@ export default function Portfolio() {
                    </Grid>
                 ))}
             </Grid>
-            </div>
         </Box>
     );
 };
